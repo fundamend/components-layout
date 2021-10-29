@@ -1,0 +1,37 @@
+const template = document.createElement('template');
+template.innerHTML = `
+<style>
+
+.fill {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+::slotted(*) {
+	flex-grow: 1;
+	flex-shrink: 1;
+	overflow: auto;
+}
+
+::slotted(:not(main)) {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+</style>
+
+<div class="fill">
+	<slot>[add your content here]</slot>
+</div>
+`;
+
+class FundamendFill extends HTMLElement {
+	connectedCallback() {
+		this.attachShadow({ mode: 'open' });
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
+	}
+}
+
+window.customElements.define('fundamend-fill', FundamendFill);
