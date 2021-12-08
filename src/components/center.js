@@ -1,10 +1,6 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
-:host {
-	pointer-events: none;
-}
-
 .center {
 	width: 100%;
 	height: 100%;
@@ -12,7 +8,6 @@ template.innerHTML = `
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	pointer-events: none;
 }
 
 :host([x]) .center {
