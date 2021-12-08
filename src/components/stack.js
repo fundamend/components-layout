@@ -6,22 +6,22 @@ template.innerHTML = `
 }
 
 .stack,
-:host([x]) .stack {
+:host([y]) .stack {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
 ::slotted(*:not(:first-child)),
-:host([x]) ::slotted(*:not(:first-child)) {
+:host([y]) ::slotted(*:not(:first-child)) {
 	margin-top: var(--size0, 20px);
 }
 
-:host([y]) .stack {
+:host([x]) .stack {
 	flex-direction: row;
 }
 
-:host([y]) ::slotted(*:not(:first-child)) {
+:host([x]) ::slotted(*:not(:first-child)) {
 	margin-top: 0;
 	margin-left: var(--size0, 20px);
 }
