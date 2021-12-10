@@ -41,8 +41,10 @@ template.innerHTML = `
 
 class FundamendCluster extends HTMLElement {
 	connectedCallback() {
-		this.attachShadow({ mode: 'open' });
-		this.shadowRoot.appendChild(template.content.cloneNode(true));
+		if (!this.shadowRoot) {
+			this.attachShadow({ mode: 'open' });
+			this.shadowRoot.appendChild(template.content.cloneNode(true));
+		}
 	}
 }
 
