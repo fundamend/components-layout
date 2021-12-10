@@ -17,6 +17,8 @@ template.innerHTML = `
 	--box-padding: var(--size0, 20px);
 
 	padding: var(--box-padding);
+	width: 100%;
+	height: 100%;
 }
 
 :host([x]) .box {
