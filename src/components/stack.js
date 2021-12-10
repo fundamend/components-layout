@@ -5,7 +5,15 @@ template.innerHTML = `
 	--stack-margin: var(--size0, 20px);
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 :host {
+	display: block;
+}
 	width: 100%;
 	height: 100%;
 }

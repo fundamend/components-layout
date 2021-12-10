@@ -1,6 +1,12 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 :host {
 	--sidebar-gutter: var(--size0, 20px);
 

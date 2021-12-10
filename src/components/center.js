@@ -1,7 +1,14 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 :host {
+	display: block;
 	width: 100%;
 	height: 100%;
 }
