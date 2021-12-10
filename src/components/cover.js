@@ -31,7 +31,7 @@ template.innerHTML = `
 
 <div class="cover">
 	<h1>
-		<slot>[add your content here]</slot>
+		<slot></slot>
 	</h1>
 	<slot name="content"></slot>
 </div>

@@ -17,7 +17,7 @@ template.innerHTML = `
 </style>
 
 <div class="box">
-	<slot>[add your content here]</slot>
+	<slot></slot>
 </div>
 `;
 

@@ -36,10 +36,10 @@ template.innerHTML = `
 
 <div>
 	<div class="sidebar">
-		<slot name="sidebar">[add your sidebar content here]</slot>
+		<slot name="sidebar"></slot>
 	</div>
 	<div class="not-sidebar">
-		<slot>[add your content here]</slot>
+		<slot></slot>
 	</div>
 </div>
 `;

@@ -34,7 +34,7 @@ template.innerHTML = `
 
 <div class="cluster">
 	<div>
-		<slot>[add your content here]</slot>
+		<slot></slot>
 	</div>
 </div>
 `;

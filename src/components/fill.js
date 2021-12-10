@@ -23,7 +23,7 @@ template.innerHTML = `
 </style>
 
 <div class="fill">
-	<slot>[add your content here]</slot>
+	<slot></slot>
 </div>
 `;
 

@@ -25,7 +25,7 @@ template.innerHTML = `
 
 <div class="switcher">
 	<div>
-		<slot>[add your content here]</slot>
+		<slot></slot>
 	</div>
 </div>
 `;
