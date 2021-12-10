@@ -14,8 +14,10 @@ template.innerHTML = `
 :host {
 	display: block;
 }
+
+:host,
+:host([y]) {
 	width: 100%;
-	height: 100%;
 }
 
 .stack,
@@ -28,6 +30,10 @@ template.innerHTML = `
 ::slotted(*:not(:first-child)),
 :host([y]) ::slotted(*:not(:first-child)) {
 	margin-top: var(--size0, 20px);
+}
+
+:host([x]) {
+	heigth: 100%;
 }
 
 :host([x]) .stack {
@@ -45,7 +51,6 @@ template.innerHTML = `
 }
 
 :host([z]) ::slotted(*) {
-	color: red;
 	grid-area: 1/-1;
 	margin: 0;
 }
