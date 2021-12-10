@@ -1,6 +1,11 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+:host {
+	width: 100%;
+	height: 100%;
+}
+
 .switcher {
 	--switcher-threshold: 30rem;
 	--switcher-margin: var(--size0, 2px);

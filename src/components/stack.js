@@ -5,6 +5,11 @@ template.innerHTML = `
 	--stack-margin: var(--size0, 20px);
 }
 
+:host {
+	width: 100%;
+	height: 100%;
+}
+
 .stack,
 :host([y]) .stack {
 	display: flex;
