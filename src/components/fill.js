@@ -13,23 +13,30 @@ template.innerHTML = `
 	height: 100%;
 }
 
-.fill {
-	height: 100%;
+.fill,
+:host([y]) .fill {
 	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-content: stretch;
+}
+
+:host([x]) .fill {
+	flex-direction: row;
 }
 
 ::slotted(*) {
 	flex-grow: 1;
-	flex-shrink: 1;
 	overflow: auto;
+	scrollbar-gutter: stable;
 }
 
-::slotted(:not(main)) {
+::slotted(header),
+::slotted(footer) {
 	flex-grow: 0;
-	flex-shrink: 0;
+	overflow: initial;
 }
 </style>
 
