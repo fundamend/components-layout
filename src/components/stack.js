@@ -18,6 +18,7 @@ template.innerHTML = `
 :host,
 :host([y]) {
 	width: 100%;
+	heigth: auto;
 }
 
 .stack,
@@ -33,7 +34,8 @@ template.innerHTML = `
 }
 
 :host([x]) {
-	heigth: 100%;
+	width: auto;
+	height: 100%;
 }
 
 :host([x]) .stack {
