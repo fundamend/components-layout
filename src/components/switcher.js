@@ -10,7 +10,6 @@ template.innerHTML = `
 :host {
 	display: block;
 	width: 100%;
-	height: 100%;
 }
 
 .switcher {
@@ -25,6 +24,7 @@ template.innerHTML = `
 	display: flex;
 	flex-wrap: wrap;
 	margin: calc(var(--switcher-margin) / -2);
+	justify-content: center;
 }
 
 ::slotted(*) {
