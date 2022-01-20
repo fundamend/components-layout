@@ -31,7 +31,6 @@ template.innerHTML = `
 	flex-grow: 1 !important;
 	flex-basis: calc((var(--switcher-threshold) - 100%) * 999) !important;
 	margin: calc(var(--switcher-margin) / 2) !important;
-	background-color: red;
 }
 </style>
 
