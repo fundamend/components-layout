@@ -1,9 +1,6 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
-:root {
-	--stack-margin: var(--size0, 20px);
-}
 
 *,
 *::before,
@@ -12,6 +9,7 @@ template.innerHTML = `
 }
 
 :host {
+	--stack-gutter: var(--size2, 1rem);
 	display: block;
 }
 
@@ -30,7 +28,7 @@ template.innerHTML = `
 
 ::slotted(*:not(:first-child)),
 :host([y]) ::slotted(*:not(:first-child)) {
-	margin-top: var(--size0, 20px);
+	margin-top: var(--stack-gutter);
 }
 
 :host([x]) {
@@ -44,7 +42,7 @@ template.innerHTML = `
 
 :host([x]) ::slotted(*:not(:first-child)) {
 	margin-top: 0;
-	margin-left: var(--size0, 20px);
+	margin-left: var(--stack-gutter);
 }
 
 :host([z]) .stack {

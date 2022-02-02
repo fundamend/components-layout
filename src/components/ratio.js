@@ -13,8 +13,8 @@ template.innerHTML = `
 }
 
 .ratio {
-	--ratio-threshold: 30rem;
-	--ratio-margin: var(--size0, 2px);
+	--ratio-threshold: var(--width-text-max, 60ch);
+	--ratio-margin: var(--size0, 1rem);
 
 	width: 100%;
 	overflow: hidden;

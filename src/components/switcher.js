@@ -13,8 +13,8 @@ template.innerHTML = `
 }
 
 .switcher {
-	--switcher-threshold: 30rem;
-	--switcher-margin: var(--size0, 2px);
+	--switcher-threshold: var(--width-text-max, 60ch);
+	--switcher-margin: var(--size0, 1rem);
 
 	width: 100%;
 	overflow: hidden;
