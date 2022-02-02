@@ -4,6 +4,7 @@ import './components/cluster.js';
 import './components/cover.js';
 import './components/fill.js';
 import './components/ratio.js';
+import './components/sections.js';
 import './components/sidebar.js';
 import './components/stack.js';
 import './components/switcher.js';
