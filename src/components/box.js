@@ -8,24 +8,37 @@ template.innerHTML = `
 }
 
 :host {
+	--padding: var(--box-padding, var(--size0, 1rem));
 	display: block;
-	width: 100%;
+	width: max-content;
+	max-width: 100%;
 }
 
 .box {
-	--box-padding: var(--size0, 20px);
-
-	padding: var(--box-padding);
+	padding: var(--padding);
 	width: 100%;
 	height: 100%;
 }
 
 :host([x]) .box {
-	padding: 0 var(--box-padding);
+	padding: 0 var(--padding);
 }
 
 :host([y]) .box {
-	padding: var(--box-padding) 0;
+	padding: var(--padding) 0;
+}
+
+:host([fill]) {
+	width: 100%;
+	height: 100%;
+}
+
+:host([fill-x]) {
+	width: 100%;
+}
+
+:host([fill-y]) {
+	height: 100%;
 }
 </style>
 

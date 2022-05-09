@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module">
+			import '@fundamend/css';
+			import '../../src/index.js';
+		</script>
+		<style>
+			#fallback {
+				--box-padding: initial;
+				--size0: initial;
+			}
+
+			#global {
+				--box-padding: 4px;
+			}
+
+			fundamend-box {
+				background-color: lightgray;
+			}
+
+			.testContainer {
+				width: 512px;
+				height: 256px;
+				border: 2px dotted darkgray;
+				overflow: auto;
+				margin: var(--size0);
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>Fallback Variables</h2>
+		<section id="fallback">
+			<div class="testContainer">
+				<fundamend-box data-testid="box-padding-variable-fallback"
+					>&lt;fundamend-box/&gt;</fundamend-box
+				>
+			</div>
+		</section>
+
+		<h2>Global Variables</h2>
+		<section id="global">
+			<div class="testContainer">
+				<fundamend-box data-testid="box-padding-variable-global"
+					>&lt;fundamend-box/&gt;</fundamend-box
+				>
+			</div>
+		</section>
+
+		<h2>Fundamend Variables</h2>
+		<section id="fundamend">
+			<div class="testContainer">
+				<fundamend-box data-testid="box">&lt;fundamend-box/&gt;</fundamend-box>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box x data-testid="box-x"
+					>&lt;fundamend-box x /&gt;</fundamend-box
+				>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box y data-testid="box-y"
+					>&lt;fundamend-box y /&gt;</fundamend-box
+				>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box data-testid="box-overflow-x">
+					&lt;fundamend-box&gt;<br />
+					Box that would be wider than its container<br />
+					&lt;/fundamend-box&gt;
+				</fundamend-box>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box data-testid="box-overflow-xy">
+					&lt;fundamend-box&gt;<br />
+					Box with so much content that it would be wider and deeper than its
+					container by a lot and will cause its container to overflow<br />
+					&lt;/fundamend-box&gt;
+				</fundamend-box>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box fill data-testid="box-fill"
+					>&lt;fundamend-box fill /&gt;</fundamend-box
+				>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box fill-x data-testid="box-fill-x"
+					>&lt;fundamend-box fill-x /&gt;</fundamend-box
+				>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-box fill-y data-testid="box-fill-y"
+					>&lt;fundamend-box fill-y /&gt;</fundamend-box
+				>
+			</div>
+		</section>
+	</body>
+</html>
