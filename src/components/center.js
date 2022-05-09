@@ -10,6 +10,16 @@ template.innerHTML = `
 :host {
 	display: block;
 	width: 100%;
+	height: 100%
+}
+
+:host([x]) {
+	width: 100%;
+	height: auto;
+}
+
+:host([y]) {
+	width: max-content;
 	height: 100%;
 }
 

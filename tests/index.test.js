@@ -15,3 +15,12 @@ run({
 		'box-fill-y'
 	]
 });
+
+run({
+	url: 'http://localhost:3000/center.html',
+	elements: [
+		'center',
+		'center-x',
+		'center-y',
+	]
+});
