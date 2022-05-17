@@ -8,46 +8,51 @@ template.innerHTML = `
 }
 
 :host {
+	--margin: var(--cluster-margin, var(--size0, 1rem));
 	display: block;
-	width: 100%;
+}
+
+:host([y]) {
 	height: 100%;
+	width: max-content;
 }
 
 .cluster {
-	--cluster-margin: var(--size0, 20px);
-
-	width: 100%;
-	overflow: hidden;
-}
-
-.cluster > * {
 	display: flex;
 	flex-wrap: wrap;
-	margin: calc(var(--cluster-margin) / -2);
+	gap: var(--margin);
+	width: 100%;
+	height: 100%;
+	align-content: center;
+	align-items: center;
 }
 
-::slotted(*) {
-	margin: calc(var(--cluster-margin) / 2);
+.cluster,
+:host([x]) .cluster {
+	flex-direction: row;
 }
 
-.cluster > *,
-:host([start]) .cluster > * {
+:host([y]) .cluster {
+	flex-direction: column;
+}
+
+.cluster,
+:host([start]) .cluster {
 	justify-content: flex-start;
 }
 
-:host([center]) .cluster > * {
+:host([end]) .cluster {
+	justify-content: flex-end;
+}
+
+:host([center]) .cluster {
 	justify-content: center;
 }
 
-:host([end]) .cluster > * {
-	justify-content: flex-end;
-}
 </style>
 
 <div class="cluster">
-	<div>
-		<slot></slot>
-	</div>
+	<slot></slot>
 </div>
 `;
 

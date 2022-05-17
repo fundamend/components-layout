@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="module">
+		import '@fundamend/css';
+		import './style.css';
+		import '../../src/index.js';
+	</script>
+	<style>
+		#fallback {
+			--cluster-margin: initial;
+			--size0: initial;
+		}
+
+		#global {
+			--cluster-margin: 4px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Fallback Variables</h2>
+	<section id="fallback">
+		<div class="testContainer">
+			<fundamend-cluster data-testid="cluster-margin-variable-fallback">
+				<div>&lt;fundamend-cluster/&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+	</section>
+
+	<h2>Global Variables</h2>
+	<section id="global">
+		<div class="testContainer">
+			<fundamend-cluster data-testid="cluster-margin-variable-global">
+				<div>&lt;fundamend-cluster/&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+	</section>
+
+	<h2>Fundamend Variables</h2>
+	<section id="fundamend">
+		<div class="testContainer">
+			<fundamend-cluster data-testid="cluster">
+				<div>&lt;fundamend-cluster/&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster data-testid="cluster-overflow-x">
+				<div>&lt;fundamend-cluster/&gt;</div>
+				<div>2<br>2</div>
+				<div>very long 3rd element</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster x start data-testid="cluster-x-start">
+				<div>&lt;fundamend-cluster x start /&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster x center data-testid="cluster-x-center">
+				<div>&lt;fundamend-cluster x center /&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster x end data-testid="cluster-x-end">
+				<div>&lt;fundamend-cluster x end /&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster y start data-testid="cluster-y-start">
+				<div>&lt;fundamend-cluster y start /&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster y center data-testid="cluster-y-center">
+				<div>&lt;fundamend-cluster y center /&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-cluster y end data-testid="cluster-y-end">
+				<div>&lt;fundamend-cluster y end /&gt;</div>
+				<div>2<br>2</div>
+				<div>3</div>
+			</fundamend-cluster>
+		</div>
+
+	</section>
+</body>
+
+</html>

@@ -18,9 +18,21 @@ run({
 
 run({
 	url: 'http://localhost:3000/center.html',
+	elements: ['center', 'center-x', 'center-y']
+});
+
+run({
+	url: 'http://localhost:3000/cluster.html',
 	elements: [
-		'center',
-		'center-x',
-		'center-y',
+		'cluster-margin-variable-fallback',
+		'cluster-margin-variable-global',
+		'cluster',
+		'cluster-overflow-x',
+		'cluster-x-start',
+		'cluster-x-center',
+		'cluster-x-end',
+		'cluster-y-start',
+		'cluster-y-center',
+		'cluster-y-end'
 	]
 });
