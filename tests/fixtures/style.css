@@ -1,14 +1,18 @@
 fundamend-box,
 fundamend-center,
 fundamend-cluster,
-fundamend-stack {
+fundamend-cover,
+fundamend-stack,
+fundamend-switcher {
 	background-color: lightgoldenrodyellow;
 }
 
 fundamend-box *,
 fundamend-center *,
 fundamend-cluster *,
-fundamend-stack * {
+fundamend-cover *,
+fundamend-stack *,
+fundamend-switcher * {
 	background-color: var(--black);
 	color: var(--white);
 }

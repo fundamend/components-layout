@@ -8,14 +8,13 @@ template.innerHTML = `
 }
 
 :host {
+	--gutter: var(--switcher-gutter, var(--size0, 1rem));
+	--threshold: var(--switcher-threshold, var(--width-text-max, 60ch));
 	display: block;
 	width: 100%;
 }
 
 .switcher {
-	--switcher-threshold: var(--width-text-max, 60ch);
-	--switcher-margin: var(--size0, 1rem);
-
 	width: 100%;
 	overflow: hidden;
 }
@@ -23,14 +22,13 @@ template.innerHTML = `
 .switcher > * {
 	display: flex;
 	flex-wrap: wrap;
-	margin: calc(var(--switcher-margin) / -2);
+	gap: var(--gutter);
 	justify-content: center;
 }
 
 ::slotted(*) {
 	flex-grow: 1 !important;
-	flex-basis: calc((var(--switcher-threshold) - 100%) * 999) !important;
-	margin: calc(var(--switcher-margin) / 2) !important;
+	flex-basis: calc((var(--threshold) - 100%) * 999) !important;
 }
 </style>
 

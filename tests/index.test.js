@@ -48,3 +48,15 @@ run({
 		'stack-z'
 	]
 });
+
+run({
+	url: 'http://localhost:3000/switcher.html',
+	elements: [
+		'switcher-variables-fallback-wide',
+		'switcher-variables-fallback',
+		'switcher-variables-global-wide',
+		'switcher-variables-global',
+		'switcher-wide',
+		'switcher',
+	]
+});

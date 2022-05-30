@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="module">
+		import '@fundamend/css';
+		import './style.css';
+		import '../../src/index.js';
+	</script>
+	<style>
+		#fallback {
+			--switcher-gutter: initial;
+			--switcher-threshold: initial;
+			--size0: initial;
+		}
+
+		#global {
+			--switcher-gutter: 4px;
+			--switcher-threshold: 400px;
+		}
+
+		.testContainer.wide {
+			width: calc(100% - var(--scale0));
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Fallback Variables</h2>
+	<section id="fallback">
+		<div class="testContainer wide">
+			<fundamend-switcher data-testid="switcher-variables-fallback-wide">
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+			</fundamend-switcher>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-switcher data-testid="switcher-variables-fallback">
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+			</fundamend-switcher>
+		</div>
+	</section>
+
+	<h2>Global Variables</h2>
+	<section id="global">
+		<div class="testContainer wide">
+			<fundamend-switcher data-testid="switcher-variables-global-wide">
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+			</fundamend-switcher>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-switcher data-testid="switcher-variables-global">
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+			</fundamend-switcher>
+		</div>
+	</section>
+
+	<h2>Fundamend Variables</h2>
+	<section id="fundamend">
+		<div class="testContainer wide">
+			<fundamend-switcher data-testid="switcher-wide">
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+			</fundamend-switcher>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-switcher data-testid="switcher">
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+				<div>&lt;fundamend-switcher/&gt;</div>
+			</fundamend-switcher>
+		</div>
+	</section>
+</body>
+
+</html>
