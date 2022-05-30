@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="module">
+		import '@fundamend/css';
+		import './style.css';
+		import '../../src/index.js';
+	</script>
+	<style>
+		#fallback {
+			--stack-gutter: initial;
+			--size0: initial;
+		}
+
+		#global {
+			--stack-gutter: 4px;
+		}
+
+		[data-testid="stack-z"] div {
+			color: var(--black);
+			background-color: transparent;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Fallback Variables</h2>
+	<section id="fallback">
+		<div class="testContainer">
+			<fundamend-stack data-testid="stack-gutter-variable-fallback">
+				<div>&lt;fundamend-stack/&gt;</div>
+				<div>&lt;fundamend-stack/&gt;</div>
+				<div>&lt;fundamend-stack/&gt;</div>
+			</fundamend-stack>
+		</div>
+	</section>
+
+	<h2>Global Variables</h2>
+	<section id="global">
+		<div class="testContainer">
+			<fundamend-stack data-testid="stack-gutter-variable-global">
+				<div>&lt;fundamend-stack/&gt;</div>
+				<div>&lt;fundamend-stack/&gt;</div>
+				<div>&lt;fundamend-stack/&gt;</div>
+			</fundamend-stack>
+		</div>
+	</section>
+
+	<h2>Fundamend Variables</h2>
+	<section id="fundamend">
+		<div class="testContainer">
+			<fundamend-stack data-testid="stack">
+				<div>&lt;fundamend-stack/&gt;</div>
+				<div>&lt;fundamend-stack/&gt;</div>
+				<div>&lt;fundamend-stack/&gt;</div>
+			</fundamend-stack>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-stack y data-testid="stack-y">
+				<div>&lt;fundamend-stack y /&gt;</div>
+				<div>&lt;fundamend-stack y /&gt;</div>
+				<div>&lt;fundamend-stack y /&gt;</div>
+			</fundamend-stack>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-stack x data-testid="stack-x">
+				<div>&lt;fundamend-stack x /&gt;</div>
+				<div>&lt;fundamend-stack x /&gt;</div>
+				<div>&lt;fundamend-stack x /&gt;</div>
+			</fundamend-stack>
+		</div>
+
+		<div class="testContainer">
+			<fundamend-stack z data-testid="stack-z">
+				<div>&lt;fundamend-stack z /&gt;_____2</div>
+				<div>&lt;fundamend-stack z /&gt;___1</div>
+				<div>&lt;fundamend-stack z /&gt;_0</div>
+			</fundamend-stack>
+		</div>
+	</section>
+</body>
+
+</html>

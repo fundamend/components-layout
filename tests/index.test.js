@@ -36,3 +36,15 @@ run({
 		'cluster-y-end'
 	]
 });
+
+run({
+	url: 'http://localhost:3000/stack.html',
+	elements: [
+		'stack-gutter-variable-fallback',
+		'stack-gutter-variable-global',
+		'stack',
+		'stack-y',
+		'stack-x',
+		'stack-z'
+	]
+});

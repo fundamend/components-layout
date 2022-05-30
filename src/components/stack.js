@@ -9,7 +9,7 @@ template.innerHTML = `
 }
 
 :host {
-	--stack-gutter: var(--size2, 1rem);
+	--gutter: var(--stack-gutter, var(--size0, 1rem));
 	display: block;
 }
 
@@ -30,7 +30,7 @@ template.innerHTML = `
 
 ::slotted(*:not(:first-child)),
 :host([y]) ::slotted(*:not(:first-child)) {
-	margin-top: var(--stack-gutter);
+	margin-top: var(--gutter);
 }
 
 :host([x]) {
@@ -44,12 +44,13 @@ template.innerHTML = `
 
 :host([x]) ::slotted(*:not(:first-child)) {
 	margin-top: 0;
-	margin-left: var(--stack-gutter);
+	margin-left: var(--gutter);
 }
 
 :host([z]) .stack {
 	position: relative;
 	display: grid;
+	justify-content: stretch;
 }
 
 :host([z]) ::slotted(*) {
