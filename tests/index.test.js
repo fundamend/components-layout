@@ -3,8 +3,8 @@ import run from '@fundamend/plugin-jest-easy-snapshot';
 run({
 	url: 'http://localhost:3000/box.html',
 	elements: [
-		'box-padding-variable-fallback',
-		'box-padding-variable-global',
+		'box-variables-fallback',
+		'box-variables-global',
 		'box',
 		'box-x',
 		'box-y',
@@ -24,8 +24,8 @@ run({
 run({
 	url: 'http://localhost:3000/cluster.html',
 	elements: [
-		'cluster-margin-variable-fallback',
-		'cluster-margin-variable-global',
+		'cluster-variables-fallback',
+		'cluster-variables-global',
 		'cluster',
 		'cluster-overflow-x',
 		'cluster-x-start',
@@ -40,8 +40,8 @@ run({
 run({
 	url: 'http://localhost:3000/stack.html',
 	elements: [
-		'stack-gutter-variable-fallback',
-		'stack-gutter-variable-global',
+		'stack-variables-fallback',
+		'stack-variables-global',
 		'stack',
 		'stack-y',
 		'stack-x',
