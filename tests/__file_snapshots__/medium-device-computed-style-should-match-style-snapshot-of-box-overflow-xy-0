@@ -109,7 +109,7 @@
 	"position": "static",
 	"resize": "none",
 	"right": "auto",
-	"scroll-behavior": "auto",
+	"scroll-behavior": "smooth",
 	"speak": "normal",
 	"table-layout": "auto",
 	"tab-size": "4",
