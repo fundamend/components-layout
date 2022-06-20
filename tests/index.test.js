@@ -1,4 +1,4 @@
-import run from '@fundamend/plugin-jest-easy-snapshot';
+import run from '@fundamend/plugin-vitest-easy-snapshot';
 
 run({
 	url: 'http://localhost:3000/box.html',
@@ -57,6 +57,6 @@ run({
 		'switcher-variables-global-wide',
 		'switcher-variables-global',
 		'switcher-wide',
-		'switcher',
+		'switcher'
 	]
 });
