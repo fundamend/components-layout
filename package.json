@@ -43,7 +43,8 @@
 		"lint:md:fix": "remark . --ignore-path .gitignore --output",
 		"precommit": "lint-staged",
 		"release:prepare": "cross-env-shell \"standard-version -t $npm_package_name@\"",
-		"test": "vitest run --config .vitestrc.js"
+		"test": "vitest run --config .vitestrc.js",
+		"test:watch": "vitest --config .vitestrc.js"
 	},
 	"type": "module"
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module">
+			import '@fundamend/css';
+			import './style.css';
+			import '../../src/index.js';
+		</script>
+	</head>
+
+	<body>
+		<section id="fundamend">
+			<div class="testContainer">
+				<fundamend-cover data-test-id="cover">
+					&lt;fundamend-cover/&gt;
+					<div slot="content">&lt;div slot="content"/&gt;</div>
+				</fundamend-cover>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-cover data-test-id="cover-no-content">
+					&lt;fundamend-cover/&gt;
+				</fundamend-cover>
+			</div>
+
+			<div class="testContainer">
+				<fundamend-cover data-test-id="cover-long-content">
+					&lt;fundamend-cover/&gt;
+					<div slot="content">
+						&lt;div slot="content"/&gt;<br>
+						&lt;div slot="content"/&gt;<br>
+						&lt;div slot="content"/&gt;<br>
+						&lt;div slot="content"/&gt;<br>
+						&lt;div slot="content"/&gt;
+					</div>
+				</fundamend-cover>
+			</div>
+		</section>
+	</body>
+</html>
