@@ -2,6 +2,7 @@ import './components/box.js';
 import './components/center.js';
 import './components/cluster.js';
 import './components/cover.js';
+import './components/dropdown.js';
 import './components/fill.js';
 import './components/ratio.js';
 import './components/sections.js';
